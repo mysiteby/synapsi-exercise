@@ -24,13 +24,21 @@ len_seq = len(seq)
 
 if len_seq == 0: print(output)
 if len_seq > 0:
-    while len_seq > 0:
-        i, *j = seq
+    #with while cycle
+    # while len_seq > 0:
+    #     i, *j = seq
+    #     if not output:
+    #         output = [el for el in dial[i]]
+    #     else:
+    #         output = [f+s for s in dial[i] for f in output]
+    #     seq.remove(i)
+    #     len_seq = len(seq)
+
+    # faster then while cycle
+    for i, *j in seq:
         if not output:
             output = [el for el in dial[i]]
         else:
             output = [f+s for s in dial[i] for f in output]
-        seq.remove(i)
-        len_seq = len(seq)
 
 print(output)
