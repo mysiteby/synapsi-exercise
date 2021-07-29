@@ -35,7 +35,7 @@ if len_seq > 0:
     #     len_seq = len(seq)
 
     # faster then while cycle
-    for i, *j in seq:
+    for i in seq:
         if not output:
             output = [el for el in dial[i]]
         else:
